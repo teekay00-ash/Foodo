@@ -1,0 +1,245 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #b67b0d;
+    padding-top: 50px;
+  }
+  
+  header {
+    background-color: #f13809;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  header .logo {
+    float: left;
+  }
+  
+  header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  header nav {
+    float: right;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  #shopping-bag-icon {
+    position: relative;
+  }
+  
+  #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+  }
+  
+  main {
+    margin-top: 70px;
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #333;
+  }
+   /* General Styles */
+   body1 {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: orange;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.nav-links{
+  background-color: #ff4500;
+  width: 340px;
+  height: 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: over-flow position;
+    justify-content: center;
+    position: relative;
+    background-image: url("1.v.mp4");
+    background-size: cover;
+    background-position: cover;
+    height: 80vh;
+    color: white;
+    width: 100%;
+}
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+}
+.hero-content .btn {
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.hero-content .btn:hover {
+    transform: scale(1.1);
+}
+
+/* Quick Links Section */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.quick-links a {
+    padding: 20px;
+    background-color: #ff4500;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.quick-links a:hover {
+    background-color: #ff6347;
+    transform: translateY(-5px);
+}
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /*position: absolute;*/
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    border: #0a0a0a;
+    border-radius: 2px;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 5px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 1;
+
+  }
+ 
+/*mobile respose*/
+@media screen and (max-width: 768px) {
+    .main__container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+       width: 100%;
+       margin: 0 auto;
+       height: 90vh;
+
+    }
+    .main__content{
+        text-align: center;
+        margin-top: 4rem;
+        background-image: linear-gradient(to right, #ff69b4, #ffa07a);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        background-image: linear-gradient(to right, #ff69b4, #e94b0d);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    }
+    .main__content h2{
+        font-size: 3rem;
+
+    }
+  

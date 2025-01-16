@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffb347; /* Softer orange */
+    }
+
+    header {
+      background: url("../imgs/b5.jpg") no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 50px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      padding: 8px 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #13aab4;
+    }
+
+    #shopping-bag-icon {
+      position: relative;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+
+    .container {
+      padding: 100px 20px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-sections {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .about-section {
+      flex: 1 1 calc(33.333% - 20px);
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      height: 250px;
+      overflow-y: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-section h3 {
+      margin: 0 0 10px;
+      color: #ff4500; /* Consistent theme color */
+    }
+
+    .about-section:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 5px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .ingredients, .more-info {
+      margin-top: 30px;
+    }
+
+    .ingredients h2, .more-info h2 {
+      margin-bottom: 15px;
+      color: #ff4500;
+    }
+
+    .ingredients ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .ingredients ul li {
+      margin-bottom: 10px;
+      padding: 10px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .ingredients ul li:hover {
+      background-color: #ff4500;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="menu.html#cartfinal" id="shopping-bag-icon">
+            🛒 <span id="cart-count">0</span>
+        </a></li>
+      </ul>
+    </nav>
+    <h1>Foodora</h1>
+  </header>
+
+  <section>
+    <div class="container">
+      <!-- Scrollable Information Sections -->
+      <section class="about-sections">
+        <div class="about-section">
+          <h3>Our Story</h3>
+          <p>
+            Our journey began with a passion for creating delicious and affordable meals for everyone. 
+            Over the years, we've grown into a beloved community hub where friends and families come 
+            together to enjoy good food and great company.
+          </p>
+        </div>
+        <div class="about-section">
+          <h3>Our Mission</h3>
+          <p>
+            We aim to deliver high-quality food while ensuring sustainability and supporting local 
+            farmers. Our mission is to make every meal a memorable experience, one that brings people 
+            together and fosters connections.
+          </p>
+        </div>
+        <div class="about-section">
+          <h3>Customer Experiences</h3>
+          <p>
+            Our customers love our fast and friendly service. With glowing reviews and heartfelt 
+            feedback, we remain committed to exceeding expectations and spreading joy with every bite.
+          </p>
+        </div>
+      </section>
+
+      <!-- Image Gallery -->
+      <section>
+        <h2>Our Customers</h2>
+        <div class="gallery">
+          <img src="./imgs/p1.png" alt="People eating 1">
+          <img src="./imgs/p2.png" alt="People eating 2">
+          <img src="./imgs/about2.jpg" alt="People eating 3">
+          <img src="./imgs/about4.jpg" alt="People eating 4">
+          <img src="./imgs/about5.jpg" alt="People eating 5">
+          <img src="./imgs/about6.jpg" alt="People eating 6">
+        </div>
+      </section>
+
+      <!-- Ingredients Section -->
+      <section class="ingredients">
+        <h2>Our Ingredients</h2>
+        <ul>
+          <li>Fresh, locally-sourced vegetables</li>
+          <li>High-quality meats and seafood</li>
+          <li>Organic spices and herbs</li>
+          <li>Premium cheeses and dairy products</li>
+        </ul>
+      </section>
+
+      <!-- More Info Section -->
+      <section class="more-info">
+        <h2>Why Choose Us?</h2>
+        <p>
+          At our food outlet, we prioritize quality, flavor, and customer satisfaction. Our team 
+          works tirelessly to ensure every dish is prepared with love and attention to detail. Join 
+          us to experience the difference!
+        </p>
+      </section>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Fast Food Outlet. All Rights Reserved.</p>
+
+   <ul> <li style="color: rgb(255, 255, 255);">Made by Mcklin.R & Tanaka.C</li></ul>
+
+  </footer>
+</body>
+</html>

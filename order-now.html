@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact and Payment Form</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e63e00; /* Bright Orange Background */
+      color: #333; /* General Text Color */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    /* Shopping Cart Container */
+    .cart-container {
+      background-color: #fff; /* White Background */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .cart-header {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #ff4500; /* Bright Red-Orange */
+    }
+
+    .cart-items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cart-items li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .cart-total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* Form Container */
+    .form-container {
+      background-color: #fff; /* White Background for Form */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight Shadow */
+      padding: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* Heading */
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff4500; /* Bright Red-Orange */
+    }
+
+    /* Form Group */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #ff4500; /* Bright Red-Orange Focus */
+      outline: none;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      background-color: #ff4500; /* Bright Red-Orange */
+      color: #fff; /* White Text */
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #e28409; /* Orange Hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Shopping Cart Section -->
+  <div class="cart-container">
+    <h1 class="cart-header">Your Shopping Cart</h1>
+    <ul class="cart-items" id="cart-items"></ul>
+    <p class="cart-total" id="cart-total">Total: $0.00</p>
+  </div>
+
+  <!-- Contact and Payment Form -->
+  <div class="form-container">
+    <h1>Contact and Payment Information</h1>
+    <form id="contact-payment-form">
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" required>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="form-group">
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="cash">Cash</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
+  
+    // Retrieve the cart from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    // Check if the cart is empty
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = '<p>Your cart is empty!</p>';
+      cartTotalElement.textContent = 'Total: $0.00';
+    } else {
+      // Populate the cart items
+      let total = 0;
+      cart.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <span>${item.name} (x${item.quantity})</span>
+          <span>$${(item.price * item.quantity).toFixed(2)}</span>
+        `;
+        cartItemsContainer.appendChild(listItem);
+  
+        total += item.price * item.quantity;
+      });
+
+    
+  
+      // Update the total
+      cartTotalElement.textContent = `Total: $${total.toFixed(2)}`;
+    }
+  });
+  
+</script>

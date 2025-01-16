@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Offers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: rgb(231, 173, 13);
+      color: #333;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      color: orange;
+    }
+
+    /* Header Navigation */
+    header nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+    }
+
+    header nav ul li {
+      margin-left: 15px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      padding: 8px 12px;
+      background-color: #e28409;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    header nav ul li a:hover {
+      background-color: #0a1e92;
+      transform: scale(1.1);
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    form button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    form button:hover {
+      background: #218838;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background: black;
+      color: orange;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Special Offers Just for You!</h1>
+    <p>Stay updated with exclusive deals and delicious updates.</p>
+    
+  </header>
+
+  <div class="container">
+    <h2>Sign Up for Updates</h2>
+    <p>Enter your details below to receive notifications about our latest offers and discounts.</p>
+    <form id="special-offer-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <button type="submit">Subscribe Now</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Foodora. All Rights Reserved.</p>
+    <p>Tanaka. C & Macklin</p>
+  </footer>
+
+  <script>
+    // Handle form submission
+    const form = document.getElementById('special-offer-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for subscribing! You’ll now receive updates on our special offers.');
+      form.reset(); // Clear the form
+    });
+  </script>
+</body>
+</html>
