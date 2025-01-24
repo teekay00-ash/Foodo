@@ -158,6 +158,30 @@ a {
     transform: scale(1.1);
 }
 
+
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjusted from 3.5rem */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjusted from 1.5rem */
+    }
+
+    .hero-content .btn {
+        padding: 10px 20px; /* Adjusted padding */
+        font-size: 1rem; /* Font size adjustment */
+    }
+}
+
 /* Quick Links Section */
 .quick-links {
     display: grid;
@@ -180,15 +204,45 @@ a {
     transform: translateY(-5px);
 }
   
-  footer {
-    background-color: #333;
-    color: white;
+   /* Footer Styles */
+   footer {
+    background-color: #0f0b0a;
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
-    /*position: absolute;*/
-    width: 100%;
-    bottom: 0;
-  }
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer p a {
+    display: inline-block;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    footer {
+        font-size: 0.9rem;
+        padding: 15px 0;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+}
   
   .gallery {
     display: grid;

@@ -131,6 +131,7 @@
         }
         header nav ul li {
             margin-left: 20px;
+            margin-right: 20px;
         }
         header nav ul li a {
             text-decoration: none;
@@ -171,6 +172,49 @@
     left: 0;
     z-index: 10;
 }
+/* Footer Styles */
+footer {
+    background-color: #0f0b0a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer p a {
+    display: inline-block;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    footer {
+        font-size: 0.9rem;
+        padding: 15px 0;
+    }
+
+    footer p {
+        margin: 8px 0;
+    }
+}
+.menu-section h1{
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
 
     </style>
 </head>
@@ -191,7 +235,12 @@
 
     <!-- Menu Section -->
     <section class="menu-section">
-        <h2>Our Menu</h2>
+        <br>
+        <br>
+        <br>
+        <h1>Our Menu</h1>
+        <h2>"Browse and Order your delicious Meals Here"..Click the <p style="font-style: italic;">add to cart btn.</p></h2>
+        <br>
         <div class="menu-grid">
             <div class="menu-item">
                 <img src="./imgs/classic_burger.jpg" alt="Classic Burger">
@@ -335,12 +384,12 @@
         <button class="checkout-btn">Proceed to Checkout</button>
     </div>
     <footer style="background-color: #0f0b0a;">
-        <ul>
-            <li><a href="terms.html"  style="color: rgb(255, 255, 255);">Terms of Service</a></li>
-            <li style="color: rgb(255, 255, 255);">Made by Mcklin.R & Tanaka.C</li>
-        </ul>
+        
+            <p><a href="terms.html"  style="color: rgb(255, 255, 255);">Terms of Service</a></p>
+           
+       
         <p>&copy; 2025 My Website</p>
-        <p>Tanaka. C & Macklin</p>
+        <p>Tanaka. C & Mcklin</p>
       </footer>
 
     <script>
